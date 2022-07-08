@@ -1,0 +1,249 @@
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #aeaeae;
+}
+
+h2 {
+  color: #c99f6c;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 5px;
+}
+
+h3 {
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin: 0;
+  text-align: center;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: 21px;
+  letter-spacing: 0;
+  line-height: 18px;
+  color: white;
+}
+
+h6 {
+  color: white;
+  font-family: "Raleway", cursive;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0;
+  margin: 0;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.cursive {
+  font-family: "Tangerine", cursive;
+  text-transform: none;
+}
+
+.top-logo {
+  position: absolute;
+  width: 250px;
+  margin: 50px 0;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.shop {
+  position: relative;
+  min-height: 100vh;
+  background: url("../images/background-fundicao-1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  overflow: scroll;
+}
+
+.product-container {
+  margin: 0;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 25px;
+  break-inside: avoid;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-form {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+
+.products {
+  padding: 200px 0 130px;
+  z-index: 1;
+  column-count: 1;
+}
+
+.shop .ReactGridGallery_tile {
+  background: none !important;
+}
+
+.shop .ReactGridGallery_tile-viewport {
+  height: auto !important;
+}
+
+.shop .ReactGridGallery_tile-viewport > img,
+.product-image {
+  width: 100%;
+  padding-bottom: 2rem;
+  height: auto !important;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem 2rem;
+  width: calc(100% - 4rem);
+  background: url("../images/background-pattern.png");
+}
+
+.product-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 32px;
+}
+
+.shop .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  pointer-events: none;
+}
+
+.shop .language-selectors {
+  display: none;
+}
+
+.separator {
+  width: 100px;
+  margin: 2rem 0;
+}
+
+.button.loading {
+  background-color: #c99f6c !important;
+  padding: 12px 40px;
+  outline: 4px solid #c99f6c !important;
+  outline-offset: 0px !important;
+  border: 1px solid white !important;
+  color: white !important;
+  cursor: pointer;
+  min-width: 162px;
+}
+
+.button.disabled {
+  border: 1px solid #ccc;
+  outline: 1px solid #ccc;
+  background: #ccc;
+  color: #0f0e0e;
+  pointer-events: none;
+  margin-top: 20px;
+}
+
+.shop .footer {
+  background-color: #0f0e0e;
+  padding: 20px;
+  margin: 0 auto;
+  font-size: 11px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: calc(100vw - 40px);
+  left: 0;
+}
+
+.shop .footer > div {
+  max-width: 500px;
+  font-family: "Open Sans", sans-serif;
+}
+
+/** TALETS **/
+@media (min-width: 641px) {
+  .products {
+    padding: 220px 0 150px;
+    z-index: 1;
+    column-count: 2;
+    column-gap: 5px;
+    max-width: 900px;
+  }
+}
+
+/** DESKTOP **/
+@media (min-width: 961px) {
+  .shop {
+    position: relative;
+    min-height: 100vh;
+    background: url("../images/background-fundicao-1.jpg");
+    background-size: cover;
+  }
+
+  .top-logo {
+    position: absolute;
+    width: 300px;
+    margin: 50px 0;
+    opacity: 0.9;
+    z-index: 1;
+  }
+
+  .products {
+    padding: 220px 0 150px;
+    z-index: 1;
+    column-count: 3;
+    column-gap: 5px;
+    max-width: 900px;
+  }
+
+  .product-container {
+    margin: 0 0 30px;
+    grid-template-rows: 1fr auto;
+    break-inside: avoid;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Safari only */
+  _::-webkit-full-page-media, _:future, :root .products {
+    column-count: 2;
+  }
+
+  _::-webkit-full-page-media, _:future, :root .product-container {
+    margin: 0;
+  }
+}
